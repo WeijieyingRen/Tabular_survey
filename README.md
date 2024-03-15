@@ -15,7 +15,9 @@ pip install -r requirements.txt
 ### Baseline structure
 
 ```Generation/tab-ddpm```: tabDDPM, TVAE
+
 ```Generation/TABSYN```: TABSYN, CODI, STASY, GOGGLE
+
 ```TTA```: TENT, EATA, SHOT, TAST
 
 ### Preparing Datasets
