@@ -28,8 +28,9 @@ Download dataset:
 
 ```
 
-Place generation datasets into 'tab-ddpm/data' and 'TABSYN/data'.
-Place TTA datasets into 'TTA/data'.
+Place generation datasets into ```tab-ddpm/data``` and ```TABSYN/data```.
+
+Place TTA datasets into ```TTA/data```.
 
 ### Examples
 
