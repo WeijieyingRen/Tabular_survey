@@ -1,6 +1,34 @@
 # Tabular_survey
 Protocol on Tabular data prediction, generation, test time adaptation
 
+### Installing Dependencies
+
+
+Install according to the dependencies of different baselines.
+```
+conda create -n [baseline] python=3.10
+conda activate [baseline]
+pip install torch torchvision torchaudio
+pip install -r requirements.txt
+```
+
+### Baseline structure
+
+```Generation/tab-ddpm```: tabDDPM, TVAE
+```Generation/TABSYN```: TABSYN, CODI, STASY, GOGGLE
+```TTA```: TENT, EATA, SHOT, TAST
+
+### Preparing Datasets
+
+Download dataset:
+
+```
+
+```
+
+Place generation datasets into 'tab-ddpm/data' and 'TABSYN/data'.
+Place TTA datasets into 'TTA/data'.
+
 ### Examples
 
 <ins>TabDDPM</ins>
