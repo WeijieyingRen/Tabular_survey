@@ -18,7 +18,7 @@ class EATA(nn.Module):
     """EATA adapts a model by entropy minimization during testing.
     Once EATAed, a model adapts itself by updating on every forward.
     """
-    def __init__(self, model, optimizer, fishers=None, fisher_alpha=2000.0, steps=1, episodic=False, e_margin=math.log(1000)/2-1, d_margin=0.05):
+    def __init__(self, model, optimizer, fishers=None, fisher_alpha=1/2000.0, steps=1, episodic=False, e_margin=math.log(1000)/2-1, d_margin=0.05):
         super().__init__()
         self.model = model
         self.optimizer = optimizer

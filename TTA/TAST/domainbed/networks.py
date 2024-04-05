@@ -233,7 +233,7 @@ def Featurizer(input_shape, hparams):
             categories = hparams['dataset_info']['cat_clsnum'],                 # tuple containing the number of unique values within each category
             num_continuous = hparams['dataset_info']['n_num_features'],         # number of continuous values
             dim = 32,                                                           # dimension, paper set at 32
-            dim_out = 48,                                                       # binary prediction, but could be anything
+            dim_out = 128,                                                      # binary prediction, but could be anything
             depth = 6,                                                          # depth, paper recommended 6
             heads = 8,                                                          # heads, paper recommends 8
             attn_dropout = 0.1,                                                 # post-attention dropout

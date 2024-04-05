@@ -361,7 +361,7 @@ def train_source(args, dataset_path, dataset_info):
             attn_dropout = 0.1,                                         # post-attention dropout
             ff_dropout = 0.1                                            # feed forward dropout
         )
-        netF = FT_Model(dataset_info['class_num'], FTTrans, dataset_info['num_index'], dataset_info['cat_index']).cuda()
+        netF = FT_Model(48, FTTrans, dataset_info['num_index'], dataset_info['cat_index']).cuda()
     
     netB = network.feat_bottleneck(type=args.classifier, feature_dim=netF.in_features, bottleneck_dim=args.bottleneck).cuda()
     netC = network.feat_classifier(type=args.layer, class_num = args.class_num, bottleneck_dim=args.bottleneck).cuda()
@@ -498,7 +498,7 @@ def test_target(args, dataset_path, dataset_info):
             attn_dropout = 0.1,                                         # post-attention dropout
             ff_dropout = 0.1                                            # feed forward dropout
         )
-        netF = FT_Model(dataset_info['class_num'], FTTrans, dataset_info['num_index'], dataset_info['cat_index']).cuda()
+        netF = FT_Model(48, FTTrans, dataset_info['num_index'], dataset_info['cat_index']).cuda()
     
     netB = network.feat_bottleneck(type=args.classifier, feature_dim=netF.in_features, bottleneck_dim=args.bottleneck).cuda()
     netC = network.feat_classifier(type=args.layer, class_num = args.class_num, bottleneck_dim=args.bottleneck).cuda()
